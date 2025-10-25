@@ -2,6 +2,8 @@ import numpy as np
 import cv2 as cv
 import streamlit as st
 
+st.set_page_config(page_title="Animal Filter", layout="wide")
+
 def read_as_cv2_image(file) -> np.ndarray:
     """Streamlit UploadedFile -> OpenCV 이미지(np.ndarray, BGR/RGBA)."""
     data = file.getvalue()                 # 바이트 얻기 (read() 대신 getvalue() 쓰면 포인터 신경 X)
